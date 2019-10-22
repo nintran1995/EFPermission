@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.2</Version>
+    <Authors>kavics,tusmester</Authors>
+    <Company>Sense/Net Inc.</Company>
+    <Description>RabbitMQ message provider implementation for the SenseNet.Security project.</Description>
+    <Copyright>Copyright © Sense/Net Inc.</Copyright>
+    <NeutralLanguage>English</NeutralLanguage>
+    <PackageLicenseUrl>https://github.com/SenseNet/sn-security/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/SenseNet/sn-security</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/SenseNet/sn-resources/master/images/sn-icon/sensenet-icon-64.png</PackageIconUrl>
+    <PackageTags>sensenet security permissions messaging rabbitmq</PackageTags>
+    <PackageReleaseNotes>See release notes on GitHub.</PackageReleaseNotes>
+    <Product>sensenet Security RabbitMQ message provider</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\SenseNet.Security.Messaging.RabbitMQ.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="5.1.0-rc3" />
+    <PackageReference Include="SenseNet.Tools" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SenseNet.Security\SenseNet.Security.csproj" />
+  </ItemGroup>
+
+</Project>
